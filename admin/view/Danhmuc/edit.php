@@ -42,7 +42,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?='?act=sua-danhmuc&id='.$list['id'] ?>"method="post" enctype="multipart/form-data">
+              <form action="<?= '?act=sua-danhmuc&id='.$list['id']?>" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label>tên danh mục</label>

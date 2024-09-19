@@ -43,6 +43,7 @@ class AdminDanhmucController {
     }
     public function update(){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $id = $_GET['id'];
             $ten_danh_muc = $_POST['ten_danh_muc'];
             $mo_ta = $_POST['mo_ta'];
         // xử lý lỗi
@@ -54,8 +55,8 @@ class AdminDanhmucController {
             }
 
             if(empty($error)){
-                $this->model->addList($ten_danh_muc,$mo_ta);
-                header('location :'.BASE_URL_ADMIN);
+                $this->model->addproductid($id,$ten_danh_muc,$mo_ta);
+                header('?act=danhmuc');
             }else{
                 require_once '../admin/view/Danhmuc/add.php';
             }

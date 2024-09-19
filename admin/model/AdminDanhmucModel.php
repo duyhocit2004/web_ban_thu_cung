@@ -26,4 +26,10 @@ class AdminDanhmucModel {
         $stmt -> execute();
         return $stmt -> fetch();
     }
+
+        public function addproductid($id , $ten_danh_muc , $mo_ta){
+            $sql = "UPDATE `danh_mucs` SET `ten_danh_muc`='$ten_danh_muc',`mo_ta`='$mo_ta' WHERE $id";
+            $stmt = $this->data->prepare($sql);
+            $stmt->execute();
+        }
 }

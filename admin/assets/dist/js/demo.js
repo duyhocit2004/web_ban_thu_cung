@@ -13,6 +13,7 @@
     return string.charAt(0).toUpperCase() + string.slice(1)
   }
 
+  
   function createSkinBlock(colors, callback, noneSelected) {
     var $block = $('<select />', {
       class: noneSelected ? 'custom-select mb-3 border-0' : 'custom-select mb-3 text-light border-0 ' + colors[0].replace(/accent-|navbar-/, 'bg-')
